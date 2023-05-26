@@ -46,6 +46,7 @@
           </div>
         </div>
 
+<<<<<<< HEAD
         <div class="card">          
           <div class="card-body" style="padding: 3rem">
             <h2 class="card-title" style="margin-bottom: 40px;">Projects</h2>
@@ -118,6 +119,184 @@
                       <b>Tech Used:</b>Angular, CesiumJS, AWS S3<br>
                       <b>URL:</b><a href="http://comms-transmission-tool.s3-website-us-east-1.amazonaws.com/cubesat">Cubesat Planning Tool</a> 
                     </div>
+=======
+
+
+          <div class="card">
+            <div class="card-block">
+              <h2>Projects</h2>
+              <h3 class="h5">Communication Engineering Tool</h3>
+              <p align="justify">This is an online tool developed to help students understand the fundamentals of
+                communication systems engineering. It is used in Communication Systems I course in the Department of
+                Electrical and Computer Engineering at the University of the West Indies. It is a front end app
+                developed in Angular and stylized using Angular material. Previously deployed in Heroku. Currently deployed in Amazon Web Service S3 bucket. Plots were done using
+                Plotly.js.<br>
+                <b>Tech Used: </b>Angular, Plotly.js, AWS S3<br>
+                <b>URL:</b><a href="http://comms-eng-tool.s3-website-us-east-1.amazonaws.com/">Communication Engineering Tool</a>
+              </p>
+              <div id="carousel-comms-tool" class="carousel slide" data-ride="carousel">
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                  <div class="item active">
+                    <img src="./assets/images/message_signal.jpg" class="img-responsive" alt="...">
+                  </div>
+                  <div class="item">
+                    <img src="./assets/images/filter-message.jpg" class="img-responsive" alt="...">
+                  </div>
+                  <div class="item">
+                    <img src="./assets/images/amp-mod.jpg" class="img-responsive" alt="...">
+                  </div>
+                  <div class="item">
+                    <img src="./assets/images/freq-mod.jpg" class="img-responsive" alt="...">
+                  </div>
+                  <div class="item">
+                    <img src="./assets/images/noise.jpg" class="img-responsive" alt="...">
+                  </div>
+                </div>
+
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                  <li data-target="#carousel-comms-tool" data-slide-to="0" class="active"></li>
+                  <li data-target="#carousel-comms-tool" data-slide-to="1"></li>
+                  <li data-target="#carousel-comms-tool" data-slide-to="2"></li>
+                  <li data-target="#carousel-comms-tool" data-slide-to="3"></li>
+                  <li data-target="#carousel-comms-tool" data-slide-to="4"></li>
+                </ol>
+              </div>
+
+
+              <h3 class="h5">PON Planning Tool</h3>
+              <p align="justify">This is an online tool developed to help students understand the fundamentals of
+                passive optical network planning. It is used in Transmission Systems course in the Department of
+                Electrical and Computer Engineering at the University of the West Indies. It is a front end app
+                developed in Angular and stylized using Angular material. Previously deployed in Heroku. Currently deployed in Amazon Web Service S3 bucket. Plots were done using
+                Plotly.js. Map data was obtained from Mapbox. Routing data was obtained from OSRM (Open Source Routing
+                Machine). <br>
+                <b>Tech Used: </b>Angular, Plotly.js, Mapbox, OSRM, AWS S3<br>
+                <b>URL:</b><a href="http://comms-transmission-tool.s3-website-us-east-1.amazonaws.com/pon">PON Planning Tool</a>
+              </p>
+              <div id="carousel-pon-tool" class="carousel slide" data-ride="carousel">
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                  <div class="item active">
+                    <img src="./assets/images/pon-routes.jpg" class="img-responsive" alt="...">
+                  </div>
+                  <div class="item">
+                    <img src="./assets/images/pon-routes-table.jpg" class="img-responsive" alt="...">
+                  </div>
+                  <div class="item">
+                    <img src="./assets/images/pon-add-splitter.jpg" class="img-responsive" alt="...">
+                  </div>
+                  <div class="item">
+                    <img src="./assets/images/pon-power.jpg" class="img-responsive" alt="...">
+                  </div>
+                  <div class="item">
+                    <img src="./assets/images/pon-disp.jpg" class="img-responsive" alt="...">
+                  </div>
+                </div>
+
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                  <li data-target="#carousel-pon-tool" data-slide-to="0" class="active"></li>
+                  <li data-target="#carousel-pon-tool" data-slide-to="1"></li>
+                  <li data-target="#carousel-pon-tool" data-slide-to="2"></li>
+                  <li data-target="#carousel-pon-tool" data-slide-to="3"></li>
+                  <li data-target="#carousel-pon-tool" data-slide-to="4"></li>
+                </ol>
+
+              </div>
+
+
+              <h3 class="h5">LOS Microwave Tool</h3>
+              <p align="justify">This is an online tool developed to help students understand the fundamentals of line
+                of sight microwave network planning. It is used in Transmission Systems course in the Department of
+                Electrical and Computer Engineering at the University of the West Indies. It is a front end app
+                developed in Angular and stylized using Angular material. Previously deployed in Heroku. Currently deployed in Amazon Web Service S3 bucket. Plots were done using
+                Plotly.js. Map data was obtained from OpenStreetMap. SPLAT! source code (RF Signal Propagation, Loss,
+                And Terrain analysis tool) was translated to Angular to obtain elevation data. <br>
+                <b>Tech Used: </b>Angular, Plotly.js, AWS S3<br>
+                <b>URL:</b><a href="http://comms-transmission-tool.s3-website-us-east-1.amazonaws.com/los">LOS Microwave Tool</a>
+              </p>
+              <div id="carousel-los-tool" class="carousel slide" data-ride="carousel">
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                  <div class="item active">
+                    <img src="./assets/images/los-sites.jpg" class="img-responsive" alt="...">
+                  </div>
+                  <div class="item">
+                    <img src="./assets/images/los-path.jpg" class="img-responsive" alt="...">
+                  </div>
+                  <div class="item">
+                    <img src="./assets/images/los-pathplot.jpg" class="img-responsive" alt="...">
+                  </div>
+                  <div class="item">
+                    <img src="./assets/images/los-budget.jpg" class="img-responsive" alt="...">
+                  </div>
+                </div>
+
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                  <li data-target="#carousel-los-tool" data-slide-to="0" class="active"></li>
+                  <li data-target="#carousel-los-tool" data-slide-to="1"></li>
+                  <li data-target="#carousel-los-tool" data-slide-to="2"></li>
+                  <li data-target="#carousel-los-tool" data-slide-to="3"></li>
+                </ol>
+
+              </div>
+
+
+              <h3 class="h5">VSAT Planning Tool</h3>
+              <p align="justify">This is an online tool developed to help students understand the fundamentals of very
+                small aperture terminal network planning. It is used in Transmission Systems course in the Department of
+                Electrical and Computer Engineering at the University of the West Indies. It is a front end app
+                developed in Angular and stylized using Angular material. Previously deployed in Heroku. Currently deployed in Amazon Web Service S3 bucket. The 3D graph was done
+                using Plotly.js and the 3D globe was done using CesiumJS. <br>
+                <b>Tech Used: </b>Angular, Plotly.js, CesiumJS, AWS S3<br>
+                <b>URL:</b><a href="http://comms-transmission-tool.s3-website-us-east-1.amazonaws.com/vsat">VSAT Planning Tool</a>
+              </p>
+              <div id="carousel-vsat-tool" class="carousel slide" data-ride="carousel">
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                  <div class="item active">
+                    <img src="./assets/images/vsat-sites.jpg" class="img-responsive" alt="...">
+                  </div>
+                  <div class="item">
+                    <img src="./assets/images/vsat-sphere.jpg" class="img-responsive" alt="...">
+                  </div>
+                  <div class="item">
+                    <img src="./assets/images/vsat-budget.jpg" class="img-responsive" alt="...">
+                  </div>
+                </div>
+
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                  <li data-target="#carousel-vsat-tool" data-slide-to="0" class="active"></li>
+                  <li data-target="#carousel-vsat-tool" data-slide-to="1"></li>
+                  <li data-target="#carousel-vsat-tool" data-slide-to="2"></li>
+                </ol>
+
+              </div>
+
+
+              <h3 class="h5">Cubesat Planning Tool</h3>
+              <p align="justify">This is an online tool developed to help students understand the fundamentals of
+                cubesat network planning. It is a front end app developed in Angular and stylized using Angular material. Previously deployed in Heroku. Currently deployed in Amazon Web Service S3 bucket. 
+				The 3D globe was done using CesiumJS. <br>
+                <b>Tech Used:</b>Angular, CesiumJS, AWS S3<br>
+                <b>URL:</b><a href="http://comms-transmission-tool.s3-website-us-east-1.amazonaws.com/cubesat">Cubesat Planning Tool</a>
+              </p>
+              <div id="carousel-cubesat-tool" class="carousel slide" data-ride="carousel">
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                  <div class="item active">
+                    <img src="./assets/images/cubesat-plot.jpg" class="img-responsive" alt="...">
+                  </div>
+                  <div class="item">
+                    <img src="./assets/images/cubesat-param.jpg" class="img-responsive" alt="...">
+                  </div>
+                  <div class="item">
+                    <img src="./assets/images/cubesat-budget.jpg" class="img-responsive" alt="...">
+>>>>>>> 0846f3275f9487f613c41b6ab527738eeebf48cf
                   </div>
                 </div>
                 <div class="accordion-item">
