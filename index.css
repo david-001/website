@@ -60,6 +60,17 @@
   padding: 60px 0 40px;
 }
 
+.accordion-body{
+  text-align: justify;
+  color: #555;
+}
+
+.img-responsive{
+  display:block;
+  max-width:100%;
+  height:auto
+}
+
 .video-container {
   position: relative;
   padding-bottom: 56.25%; /* 16:9 */
