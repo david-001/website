@@ -84,15 +84,90 @@
   height: 100%;
 }
 
-@media (min-width: 992px){
+
+.carousel-item{
+  height:800px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+
+/* @media (min-width: 992px){
   .container {
     width: 970px;
+  }
+  .carousel-item img {
+    width: auto !important;
+    height: 970px;
+    max-height: 970px;
   }
 }
 
 @media (min-width: 768px){
   .container {
     width: 750px;
+  }
+  .carousel-item img {
+    width: auto !important;
+    height: 750px;
+    max-height: 750px;
+  }
+} */
+
+@media screen and (max-width: 1440px){
+  .container {
+    width: 1440px;    
+  }
+  .carousel-item{
+    height:800px;
+  }
+  
+}
+
+@media screen and (max-width: 1200px){
+  .container {
+    width: 1200px;
+  }
+  .carousel-item{
+    height:700px;
+  }
+}
+
+@media screen and (max-width: 1024px){
+  .container {
+    width: 1024px;
+  }
+  .carousel-item{
+    height:600px;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .container {
+    width: 768px;
+  }
+  .carousel-item{
+    height:500px;
+  }
+}
+
+@media screen and (max-width: 480px){
+  .container {
+    width: 480px;
+  }
+  .carousel-item{
+    height:300px;
+  }
+}
+
+@media screen and (max-width: 320px){
+  .container {
+    width: 320px;
+  }
+  .carousel-item{
+    height:300px;
   }
 }
 
