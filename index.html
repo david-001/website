@@ -6,313 +6,270 @@
     <title>David Akim</title>
     <meta name="description" content="David Akim Portfolio">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        body{
+          font-family: 'Montserrat', sans-serif;
+        }
+        h1{
+          font-size: 50px;
+        }
+        h2{
+          font-size: 30px;
+        }
+        .menu-glow{
+          text-shadow: 0px 0px 5px rgb(255,255,255);
+        }    
+        .icon-glow{
+          text-shadow: 0px 0px 3px rgb(255,255,255);
+        }
+        .h1-glow{
+          text-shadow: 0px 0px 20px rgb(255,255,255);
+        }    
+      }
+    </style>
   </head>
-  <nav class="navbar">
-    <div>dsad</div>
-    <div class="menu">
-      <div class="menuitem">About</div>
-      <div class="menuitem">Projects</div>
-      <div class="menuitem">Blogs</div>    
-      <div class="menuitem">Certificates</div>      
+  
+  <body class="bg-blue-500">    
+<!------------------------- Navbar ---------------------------->
+  <nav class="bg-blue-900 py-6 px-6 w-full top-0 left-0 z-10">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-center mx-auto"> 
+      <!----------- Hamburger button -------- -->
+      <button
+        type="button"
+        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden focus:outline-none focus:ring-2 text-blue-400 hover:bg-blue-700 focus:ring-blue-600"
+        aria-controls="navbar-default"
+        aria-expanded="false"
+        onClick={handleClick}
+      >
+      ☰
+      </button>
+      <!-------- Navbar menu items -------->
+      <div class="w-full items-center justify-center md:block md:w-auto">
+        <ul class="font-medium flex flex-col bg-blue-900 md:flex-row md:space-x-8 ">
+          <li>
+            <a
+              href='#about'
+              class="block py-2 pl-3 pr-4 text-white rounded hover:text-yellow-300 hover:menu-glow md:border-0 md:p-0"
+            >
+              About
+            </a>
+          </li>
+          <li>
+            <a
+              href='#projects'
+              class="block py-2 pl-3 pr-4 text-white rounded hover:text-yellow-300 hover:menu-glow md:border-0 md:p-0"
+            >
+              Projects
+            </a>
+          </li>
+          <li>
+            <a
+              href='#blogs'
+              class="block py-2 pl-3 pr-4 text-white rounded hover:text-yellow-300 hover:menu-glow md:border-0 md:p-0"
+            >
+              Blogs
+            </a>
+          </li>          
+        </ul>
+      </div>
     </div>
-    
   </nav>
-  <body class="body-background">
-    <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->    
     <main>
-      <header class="white-class section-container">
-        <div class="text-center">
-          <h1 class="header1">David Akim</h1>
-          <p>Web developer</p>
-          <p class="paragraph">
-            <a class="fa-icon fa-icon-2x a-class" href="https://github.com/david-001/" title="">
-              <i class="fab fa-github"></i>
-            </a>
-            <a class="fa-icon fa-icon-2x a-class" href="https://www.linkedin.com/in/david-a-a3749a247/" title="">
-              <i class="fab fa-linkedin"></i>
-            </a>
-            <a class="fa-icon fa-icon-2x a-class" href="mailto: davidjohnakim@hotmail.com" title="">
-              <i class="fas fa-envelope"></i>
-            </a>
-          </p>
-        </div>      
-      </header>
-      <div class="container">
-        <div class="card">          
-          <div class="card-body" style="padding: 3rem">
-            <h2 class="card-title" style="margin-bottom: 40px;">About Me</h2>
-            <p class="card-text">
-              A developer with a background in Electrical and Computer Engineering and a passion for creating web applications. I have a diverse skill set that encompasses developing Angular apps, building an e-commerce platform with Django, and creating a book review app using React and Spring Boot.
-            </p>
-          </div>
-        </div>
+      <div class="h-fit max-w-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl mx-auto">
+<!------------------------- Header ---------------------------->
+        <header>
+          <div class="text-center text-white py-12">
+            <h1 class="h1-glow">David Akim</h1>
+            <p>Full Stack Developer</p>
+            <div>
+              <a class="fa-icon fa-3x px-2 hover:text-yellow-300 hover:icon-glow" href="https://github.com/david-001/">
+                <i class="fab fa-github"></i>
+              </a>
+              <a class="fa-icon fa-3x px-2 hover:text-yellow-300 hover:icon-glow" href="https://www.linkedin.com/in/david-a-a3749a247/">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a class="fa-icon fa-3x px-2 hover:text-yellow-300 hover:icon-glow" href="mailto: davidjohnakim@hotmail.com">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>  
+          </div>          
+        </header>    
 
-        <div class="card">          
-          <div class="card-body" style="padding: 3rem">
-            <h2 class="card-title" style="margin-bottom: 40px;">Projects</h2>
-              <div class="accordion">
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                      Communication Engineering Tool
-                    </button>
-                  </h2>
-                  <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
-                    <div class="accordion-body">
-                      This is an online tool developed to help students understand the fundamentals of communication systems engineering. It is used in Communication Systems I course in the Department of Electrical and Computer Engineering at the University of the West Indies. It is a front end app developed in Angular and stylized using Angular material. Previously deployed in Heroku. Currently deployed in Amazon Web Service S3 bucket. Plots were done using Plotly.js.<br>
-                      <b>Tech Used: </b>Angular, Plotly.js, AWS S3<br>
-                      <b>URL: </b><a href="http://comms-eng-tool.s3-website-us-east-1.amazonaws.com/">Communication Engineering Tool</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                      PON Planning Tool
-                    </button>
-                  </h2>
-                  <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                      This is an online tool developed to help students understand the fundamentals of passive optical network planning. It is used in Transmission Systems course in the Department of Electrical and Computer Engineering at the University of the West Indies. It is a front end app developed in Angular and stylized using Angular material. Previously deployed in Heroku. Currently deployed in Amazon Web Service S3 bucket. Plots were done using Plotly.js. Map data was obtained from Mapbox. Routing data was obtained from OSRM (Open Source Routing Machine).<br>
-                      <b>Tech Used: </b>Angular, Plotly.js, Mapbox, OSRM, AWS S3<br>
-                      <b>URL: </b><a href="http://comms-transmission-tool.s3-website-us-east-1.amazonaws.com/pon">PON Planning Tool</a> 
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                      LOS Microwave Tool
-                    </button>
-                  </h2>
-                  <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                      This is an online tool developed to help students understand the fundamentals of line of sight microwave network planning. It is used in Transmission Systems course in the Department of Electrical and Computer Engineering at the University of the West Indies. It is a front end app developed in Angular and stylized using Angular material. Previously deployed in Heroku. Currently deployed in Amazon Web Service S3 bucket. Plots were done using Plotly.js. Map data was obtained from OpenStreetMap. SPLAT! source code (RF Signal Propagation, Loss, And Terrain analysis tool) was translated to Angular to obtain elevation data.<br>
-                      <b>Tech Used: </b>Angular, Plotly.js, AWS S3<br>
-                      <b>URL: </b><a href="http://comms-transmission-tool.s3-website-us-east-1.amazonaws.com/los">LOS Microwave Tool</a> 
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
-                      VSAT Planning Tool
-                    </button>
-                  </h2>
-                  <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                      This is an online tool developed to help students understand the fundamentals of very small aperture terminal network planning. It is used in Transmission Systems course in the Department of Electrical and Computer Engineering at the University of the West Indies. It is a front end app developed in Angular and stylized using Angular material. Previously deployed in Heroku. Currently deployed in Amazon Web Service S3 bucket. The 3D graph was done using Plotly.js and the 3D globe was done using CesiumJS.<br>
-                      <b>Tech Used: </b>Angular, Plotly.js, CesiumJS, AWS S3<br>
-                      <b>URL: </b><a href="http://comms-transmission-tool.s3-website-us-east-1.amazonaws.com/vsat">VSAT Planning Tool</a> 
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
-                      Cubesat Planning Tool
-                    </button>
-                  </h2>
-                  <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                      This is an online tool developed to help students understand the fundamentals of cubesat network planning. It is a front end app developed in Angular and stylized using Angular material. Previously deployed in Heroku. Currently deployed in Amazon Web Service S3 bucket. The 3D globe was done using CesiumJS.<br>
-                      <b>Tech Used: </b>Angular, CesiumJS, AWS S3<br>
-                      <b>URL: </b><a href="http://comms-transmission-tool.s3-website-us-east-1.amazonaws.com/cubesat">Cubesat Planning Tool</a> 
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false" aria-controls="panelsStayOpen-collapseSix">
-                      E-Commerce Website
-                    </button>
-                  </h2>
-                  <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                      E-Commerce website with admin panel, retailer panel and customer panel. Admin can approve the status of retailer, view the status of retailers, view retailer information and download all data in a CSV file. The retailer can see all the information on orders, change the delivery status of items and download the information in a CSV file. The customer can add product to the cart and purchase the product.<br>
-                      <b>Tech Used: </b>Django, Python<br>   
-                      <b>Github: </b><a href="https://github.com/david-001/ecommerce-website-django">E-Commerce website Github</a><br>   
-                      <b>Video: </b><a href="https://youtu.be/JxU1AqRI_Wg">E-Commerce website Youtube</a>                         
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSeven" aria-expanded="false" aria-controls="panelsStayOpen-collapseSeven">
-                      Book Review App
-                    </button>
-                  </h2>
-                  <div id="panelsStayOpen-collapseSeven" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                      <!-- <div class="video-container">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/gO4RVuBF4MY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                      </div><br>                       -->
-                      Book review app built using Open Library API, React, Spring Boot and PostgreSQL. Spring Boot is used to expose RESTful web services. PostgreSQL database is used to store and access data. React is used for user interface and navigation.<br>
-                      <b>Tech Used: </b>Spring Boot (Java), PostgresSQL, React <br>        
-                      <b>Github: </b><a href="https://github.com/david-001/book-review-app">Book review app Github</a><br>   
-                      <b>Video: </b><a href="https://youtu.be/SqMtOeFLTlw">Book review app Youtube</a>           
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseEight" aria-expanded="false" aria-controls="panelsStayOpen-collapseEight">
-                      Build a Slackbot from Scratch
-                    </button>
-                  </h2>
-                  <div id="panelsStayOpen-collapseEight" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                      <!-- <div class="video-container">
-                        <iframe width="560" height="315" src="https://youtu.be/aYaDmwuIdgw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                      </div><br>                       -->
-                      This Slackbot accepts the user's birth date and calculates the user's age based on the current date. It uses the Slack API to communicate with the Slack platform.<br>
-                      <b>Tech Used: </b>Python<br>
-                      <b>Github: </b><a href="https://github.com/david-001/slackbot-agebot">Build a Slackbot from Scratch Github</a><br>
-                      <b>Video: </b><a href="https://youtu.be/aYaDmwuIdgw">Build a Slackbot from Scratch Youtube</a>                       
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseNine" aria-expanded="false" aria-controls="panelsStayOpen-collapseNine">
-                      Pet Adoption Odoo Module
-                    </button>
-                  </h2>
-                  <div id="panelsStayOpen-collapseNine" class="accordion-collapse collapse">
-                    <div class="accordion-body">                      
-                      This is a custom module in Odoo. This module allows you to add pet adopters and pets to the database. You can assign pets to adopters and keep track of them.<br>
-                      <b>Tech Used: </b>Python<br>                    
-                      <b>Github: </b><a href="https://github.com/david-001/odoo_pet_adoption">Source Code</a>                       
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTen" aria-expanded="false" aria-controls="panelsStayOpen-collapseTen">
-                      Sta Map (Android App)
-                    </button>
-                  </h2>
-                  <div id="panelsStayOpen-collapseTen" class="accordion-collapse collapse">
-                    <div class="accordion-body">                      
-                      Sta Map allows anyone to find classrooms, buildings or places at the University of the West Indies St. Augustine. Finding any place is easy. No more asking around for directions. Simply type the name of the place you want to find and see it on the map. <br>
-                      <b>Tech Used: </b>Java (Android)<br>                      
-                      <b>Video: </b><a href="https://youtu.be/nphESVwz8yo">Sta Map Youtube</a>                       
-                    </div>
-                  </div>
-                </div>
-              </div>
-          </div>
-        </div>
+<!------------------------- About Me ---------------------------->
+        <div id="about" class="w-full mb-10">                  
+          <div class="bg-lime-100 rounded-md py-4 px-8 md:py-8 md:px-16">
+            <h2 class="pb-6">About Me</h2>
+            <p>
+              A developer with a background in Electrical and Computer Engineering and a passion for creating web applications. 
+              I have a diverse skill set that encompasses developing Angular apps, building an e-commerce platform with Django, 
+              and creating a book review app using React and Spring Boot. I also have experience developing a M.E.R.N. stack (MongoDB, 
+              Express, React, Node) app which keeps tracks of patients' records. 
+            </p>              
+          </div>                       
+        </div>        
+        
+<!------------------------- Projects ---------------------------->        
+        <div id="projects" class="w-full mb-10">                  
+            <div class="bg-orange-100 rounded-md py-4 px-8 md:py-8 md:px-16">              
+              <h2 class="pb-6">Projects</h2>
+              <div class="w-full flex flex-wrap justify-evenly">
 
-        <div class="card">          
-          <div class="card-body" style="padding: 3rem">
-            <h2 class="card-title" style="margin-bottom: 40px;">Blogs</h2>
-            <div class="row">
-              <div class="col-sm">
-                <img src="./assets/images/blog1.jpg" class="img-responsive" alt="Using Plotly.js with Angular">
-                <h3 class="h5">
-                  <a
-                    href="https://medium.com/@davidjohnakim/using-plotly-js-with-angular-7fc07ca9a48f">
-                    Using Plotly.js with Angular
-                  </a>
-                </h3>
-                <p>August 2022</p>
-              </div>
-              <div class="col-sm">
-                <img src="./assets/images/blog2.jpg" class="img-responsive" alt="Using CesiumJS with Angular">
-                <h3 class="h5">
-                  <a
-                    href="https://medium.com/@davidjohnakim/using-cesiumjs-with-angular-f246c1d1b26a">
-                    Using CesiumJS with Angular
-                  </a>
-                </h3>
-                <p>September 2022</p>
-              </div>
-            </div>            
-          </div>
-        </div>
+                <div class="w-80 relative overflow-auto my-4 md:w-96 shadow-lg bg-blue-500 text-white lg:mx-4 hover:bg-yellow-300 hover:shadow-2xl hover:text-blue-500">
+                  <div class="font-semibold p-4 text-center">Communication Engineering Tool</div>
+                  <div class="w-full flex justify-center items-center">
+                    <img class="w-full" src="./assets/images/projects/comms_eng_tool.jpg" alt="Communication Engineering Tool" />
+                  </div>
+                  <div class="w-full text-center p-4">
+                    <p>Tech: Angular, Plotly.js, AWS S3</p>
+                    <p class="hover:text-red-500"><b>URL: <a href="http://comms-eng-tool.s3-website-us-east-1.amazonaws.com/">Communication Engineering Tool</a></b></p>                    
+                  </div>
+                </div>
 
-        <div class="card">          
-          <div class="card-body" style="padding: 3rem">
-            <h2 class="card-title" style="margin-bottom: 40px;">Certificates</h2>
-            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-              <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="5" aria-label="Slide 6"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="6" aria-label="Slide 7"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="7" aria-label="Slide 8"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="8" aria-label="Slide 9"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="9" aria-label="Slide 10"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="10" aria-label="Slide 11"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="11" aria-label="Slide 12"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="12" aria-label="Slide 13"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="13" aria-label="Slide 14"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="14" aria-label="Slide 15"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="15" aria-label="Slide 16"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="16" aria-label="Slide 17"></button>
-              </div>
-              <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="5000" style="background-image: url('https://github.com/david-001/website/blob/main/assets/images/Movie%20Ticketing.jpg?raw=true');">                  
+                <div class="w-80 relative overflow-auto my-4 md:w-96 shadow-lg bg-blue-500 text-white lg:mx-4 hover:bg-yellow-300 hover:shadow-2xl hover:text-blue-500">
+                  <div class="font-semibold p-4 text-center">PON Planning Tool</div>
+                  <div class="w-full flex justify-center items-center">
+                    <img class="w-full" src="./assets/images/projects/pon.jpg" alt="PON Planning Tool" />
+                  </div>
+                  <div class="w-full text-center p-4">
+                    <p>Tech Used: Angular, Plotly.js, Mapbox, OSRM, AWS S3</p>
+                    <p class="hover:text-red-500"><b>URL: <a href="http://comms-transmission-tool.s3-website-us-east-1.amazonaws.com/pon">PON Planning Tool</a></b></p>                    
+                  </div>
                 </div>
-                <div class="carousel-item" data-bs-interval="5000" style="background-image: url('https://github.com/david-001/website/blob/main/assets/images/Slackbot.jpg?raw=true');">                 
+
+                <div class="w-80 relative overflow-auto my-4 md:w-96 shadow-lg bg-blue-500 text-white lg:mx-4 hover:bg-yellow-300 hover:shadow-2xl hover:text-blue-500">
+                  <div class="font-semibold p-4 text-center">LOS Microwave Tool</div>
+                  <div class="w-full flex justify-center items-center">
+                    <img class="w-full" src="./assets/images/projects/los.jpg" alt="LOS Microwave Tool" />
+                  </div>
+                  <div class="w-full text-center p-4">
+                    <p>Tech Used: Angular, Plotly.js, AWS S3</p>
+                    <p class="hover:text-red-500"><b>URL: <a href="http://comms-transmission-tool.s3-website-us-east-1.amazonaws.com/los">LOS Microwave Tool</a></b></p>                    
+                  </div>
                 </div>
-                <div class="carousel-item" data-bs-interval="5000" style="background-image: url('https://github.com/david-001/website/blob/main/assets/images/abacus%20ai.jpg?raw=true');">                                    
+
+                <div class="w-80 relative overflow-auto my-4 md:w-96 shadow-lg bg-blue-500 text-white lg:mx-4 hover:bg-yellow-300 hover:shadow-2xl hover:text-blue-500">
+                  <div class="font-semibold p-4 text-center">VSAT Planning Tool</div>
+                  <div class="w-full flex justify-center items-center">
+                    <img class="w-full" src="./assets/images/projects/vsat.jpg" alt="VSAT Planning Tool" />
+                  </div>
+                  <div class="w-full text-center p-4">
+                    <p>Tech Used: Angular, Plotly.js, CesiumJS, AWS S3</p>
+                    <p class="hover:text-red-500"><b>URL: <a href="http://comms-transmission-tool.s3-website-us-east-1.amazonaws.com/vsat">VSAT Planning Tool</a></b></p>                    
+                  </div>
                 </div>
-                <div class="carousel-item" data-bs-interval="5000" style="background-image: url('https://github.com/david-001/website/blob/main/assets/images/Reply.jpg?raw=true');">                                    
+
+                <div class="w-80 relative overflow-auto my-4 md:w-96 shadow-lg bg-blue-500 text-white lg:mx-4 hover:bg-yellow-300 hover:shadow-2xl hover:text-blue-500">
+                  <div class="font-semibold p-4 text-center">Cubesat Planning Tool</div>
+                  <div class="w-full flex justify-center items-center">
+                    <img class="w-full" src="./assets/images/projects/cubesat.jpg" alt="Cubesat Planning Tool" />
+                  </div>
+                  <div class="w-full text-center p-4">
+                    <p>Tech Used: Angular, CesiumJS, AWS S3</p>
+                    <p class="hover:text-red-500"><b>URL: <a href="http://comms-transmission-tool.s3-website-us-east-1.amazonaws.com/cubesat">Cubesat Planning Tool</a></b></p>                    
+                  </div>
                 </div>
-                <div class="carousel-item" data-bs-interval="5000" style="background-image: url('https://github.com/david-001/website/blob/main/assets/images/Book%20Review.jpg?raw=true');">                  
+
+                <div class="w-80 relative overflow-auto my-4 md:w-96 shadow-lg bg-blue-500 text-white lg:mx-4 hover:bg-yellow-300 hover:shadow-2xl hover:text-blue-500">
+                  <div class="font-semibold p-4 text-center">Lifecare-Sync</div>
+                  <div class="w-full flex justify-center items-center">
+                    <img class="w-full" src="./assets/images/projects/lifecare.jpg" alt="Lifecare-Sync" />
+                  </div>
+                  <div class="w-full text-center p-4">
+                    <p>Tech Used: MongoDB, Mongoose, Express, React, NodeJS</p>
+                    <p class="hover:text-red-500"><b>URL: <a href="https://lifecare-sync.onrender.com/">Lifecare-Sync</a></b></p>   
+                    <p class="hover:text-red-500"><b>Github: <a href="https://github.com/david-001/lifecare-sync">Lifecare-Sync</a></b></p>                    
+                  </div>
                 </div>
-                <div class="carousel-item" data-bs-interval="5000" style="background-image: url('https://github.com/david-001/website/blob/main/assets/images/Data%20Analyst.jpg?raw=true');">                  
-                </div>    
-                <div class="carousel-item" data-bs-interval="5000" style="background-image: url('https://github.com/david-001/website/blob/main/assets/images/Whylabs%20AI.jpg?raw=true');">                  
-                </div>  
-                <div class="carousel-item" data-bs-interval="5000" style="background-image: url('https://github.com/david-001/website/blob/main/assets/images/Whylabs%20Computer%20Vision.jpg?raw=true');">                  
-                </div> 
-                <div class="carousel-item" data-bs-interval="5000" style="background-image: url('https://github.com/david-001/website/blob/main/assets/images/linkedin%20javascript.jpg?raw=true');">                  
-                </div>           
-                <div class="carousel-item" data-bs-interval="5000" style="background-image: url('https://github.com/david-001/website/blob/main/assets/images/DeepLearning%20AI.jpg?raw=true');">                  
+
+                <div class="w-80 relative overflow-auto my-4 md:w-96 shadow-lg bg-blue-500 text-white lg:mx-4 hover:bg-yellow-300 hover:shadow-2xl hover:text-blue-500">
+                  <div class="font-semibold p-4 text-center">E-Commerce Website</div>
+                  <div class="w-full flex justify-center items-center">
+                    <img class="w-full" src="./assets/images/projects/ecommerce.jpg" alt="E-Commerce Website" />
+                  </div>
+                  <div class="w-full text-center p-4">
+                    <p>Tech Used: Django, Python</p>
+                    <p class="hover:text-red-500"><b>Video: <a href="https://youtu.be/JxU1AqRI_Wg">E-Commerce Website</a></b></p>   
+                    <p class="hover:text-red-500"><b>Github: <a href="https://github.com/david-001/ecommerce-website-django">E-Commerce Website</a></b></p>                    
+                  </div>
                 </div>
-                <div class="carousel-item" data-bs-interval="5000" style="background-image: url('https://github.com/david-001/website/blob/main/assets/images/edx.jpg?raw=true');">                  
+
+                <div class="w-80 relative overflow-auto my-4 md:w-96 shadow-lg bg-blue-500 text-white lg:mx-4 hover:bg-yellow-300 hover:shadow-2xl hover:text-blue-500">
+                  <div class="font-semibold p-4 text-center">Book Review App</div>
+                  <div class="w-full flex justify-center items-center">
+                    <img class="w-full" src="./assets/images/projects/bookreview.jpg" alt="Book Review App" />
+                  </div>
+                  <div class="w-full text-center p-4">
+                    <p>Tech Used: Spring Boot (Java), PostgresSQL, React</p>
+                    <p class="hover:text-red-500"><b>Video: <a href="https://youtu.be/SqMtOeFLTlw">Book Review App</a></b></p>   
+                    <p class="hover:text-red-500"><b>Github: <a href="https://github.com/david-001/book-review-app">Book Review App</a></b></p>                    
+                  </div>
                 </div>
-                <div class="carousel-item" data-bs-interval="5000" style="background-image: url('https://github.com/david-001/website/blob/main/assets/images/Angular%20NodeJS.jpg?raw=true');">                  
+
+                <div class="w-80 relative overflow-auto my-4 md:w-96 shadow-lg bg-blue-500 text-white lg:mx-4 hover:bg-yellow-300 hover:shadow-2xl hover:text-blue-500">
+                  <div class="font-semibold p-4 text-center">Sta Map (Android App)</div>
+                  <div class="w-full flex justify-center items-center">
+                    <img class="w-full" src="./assets/images/projects/stamap.jpg" alt="Sta Map (Android App)" />
+                  </div>
+                  <div class="w-full text-center p-4">
+                    <p>Tech Used: Java (Android)</p>
+                    <p class="hover:text-red-500"><b>Video: <a href="https://youtu.be/nphESVwz8yo">Sta Map (Android App)</a></b></p>                                   
+                  </div>
                 </div>
-                <div class="carousel-item" data-bs-interval="5000" style="background-image: url('https://github.com/david-001/website/blob/main/assets/images/Machine%20Learning.jpg?raw=true');">                  
-                </div>
-                <div class="carousel-item" data-bs-interval="5000" style="background-image: url('https://github.com/david-001/website/blob/main/assets/images/Android%20Material.jpg?raw=true');">                 
-                </div>
-                <div class="carousel-item" data-bs-interval="5000" style="background-image: url('https://github.com/david-001/website/blob/main/assets/images/David_Akim_MASc_Degree_certificate.jpg?raw=true');">                  
-                </div>
-                <div class="carousel-item" data-bs-interval="5000" style="background-image: url('https://github.com/david-001/website/blob/main/assets/images/Python%20Fundamental.jpg?raw=true');">                  
-                </div>
-                <div class="carousel-item" data-bs-interval="5000" style="background-image: url('https://github.com/david-001/website/blob/main/assets/images/David_Akim_BSc_Degree_certificate.jpg?raw=true');">                  
-                </div>                
-                
-                
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
+
+              </div>  
+            </div>                       
+        </div>
+          
+<!------------------------- Blogs ---------------------------->
+        <div id="blogs" class="w-full mb-10">                  
+          <div class="bg-indigo-100 rounded-md py-4 px-8 md:py-8 md:px-16">              
+            <h2 class="pb-6">Blogs</h2>
+            <div class="w-full flex flex-wrap justify-evenly">
+
+              <a href="https://medium.com/@davidjohnakim/using-plotly-js-with-angular-7fc07ca9a48f" class="w-80 relative overflow-auto my-4 md:w-96 shadow-lg bg-blue-500 text-white lg:mx-4 hover:bg-red-300 hover:shadow-2xl hover:text-blue-500">
+                <div class="font-semibold p-4 text-center">Using Plotly.js with Angular</div>
+                <div class="w-full flex justify-center items-center">
+                  <img class="w-full" src="./assets/images/blogs/blog1.jpg" alt="Using Plotly.js with Angular" />
+                </div>                  
+              </a>
+
+              <a href="https://medium.com/@davidjohnakim/using-cesiumjs-with-angular-f246c1d1b26a" class="w-80 relative overflow-auto my-4 md:w-96 shadow-lg bg-blue-500 text-white lg:mx-4 hover:bg-red-300 hover:shadow-2xl hover:text-blue-500">
+                <div class="font-semibold p-4 text-center">Using CesiumJS with Angular</div>
+                <div class="w-full flex justify-center items-center">
+                  <img class="w-full" src="./assets/images/blogs/blog2.jpg" alt="Using CesiumJS with Angular" />
+                </div>                  
+              </a>
+
             </div>
-          </div>
-        </div>
-
+          </div>                    
+        </div>   
+        
+      </div>
+    </div>
+  </main>
+<!------------------------- Footer ---------------------------->
+    <footer>
+      <div class="text-center text-white">
+        <div>
+          <a class="fa-icon fa-2x px-2 hover:text-yellow-300" href="https://github.com/david-001/" title="">
+            <i class="fab fa-github hover:icon-glow"></i>
+          </a>
+          <a class="fa-icon fa-2x px-2 hover:text-yellow-300" href="https://www.linkedin.com/in/david-a-a3749a247/" title="">
+            <i class="fab fa-linkedin hover:icon-glow"></i>
+          </a>
+          <a class="fa-icon fa-2x px-2 hover:text-yellow-300" href="mailto: davidjohnakim@hotmail.com" title="">
+            <i class="fas fa-envelope hover:icon-glow"></i>
+          </a>
+        </div>          
+        <i class="far fa-copyright py-4" aria-hidden="true"></i> Created by David Akim
       </div>      
-    </main>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-    <!-- <script src="" async defer></script> -->
+    </footer>
+      
   </body>
 </html>
