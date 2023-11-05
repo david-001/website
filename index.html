@@ -9,18 +9,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> 
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">  -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Montserrat:wght@100&family=Sacramento&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style type="text/tailwindcss">
       @layer utilities {
         body{
-          font-family: 'Montserrat', sans-serif;
+          font-family: 'Merriweather', sans-serif;
         }
         h1{
-          font-size: 50px;
+          font-size: 100px;
+          font-family: 'Sacramento', sans-serif;
         }
         h2{
           font-size: 30px;
+          font-family: 'Monsterrat', sans-serif;
         }
         .menu-glow{
           text-shadow: 0px 0px 5px rgb(255,255,255);
@@ -29,33 +32,53 @@
           text-shadow: 0px 0px 3px rgb(255,255,255);
         }
         .h1-glow{
-          text-shadow: 0px 0px 20px rgb(255,255,255);
-        }    
+          text-shadow: 0px 0px 25px rgb(255,255,255);
+        }  
+        .link-glow{
+          box-shadow: 0px 0px 5px rgb(255,255,255);
+        }        
+        @layer components {
+          .project-card{
+            @apply w-96 relative overflow-auto my-4 md:mx-4 shadow-lg bg-blue-600 text-white hover:shadow-2xl hover:bg-blue-500
+          } 
+          .project-card-title{
+            @apply font-semibold pt-4 text-center
+          }       
+          .project-card-text{
+            @apply p-6 text-justify text-sm
+          }  
+          .tech-div {
+            @apply block border-2 rounded-md w-fit py-1 px-2 my-2 mx-1 text-sm
+          } 
+          .tech-link {
+            @apply block bg-blue-800 border-2 rounded-md w-fit py-1 px-4 mx-2 my-2 text-sm hover:bg-yellow-500
+          } 
+          .cert-img{
+            @apply w-80 my-6 mx-4 shadow-lg hover:w-96
+          }   
+          /* .project-card:hover .tech-div {
+            @apply border-blue-500
+          }  
+          .project-card:hover .tech-link {
+            @apply border-blue-500 bg-yellow-500
+          }        */
+        }      
       }
-    </style>
+    </style>    
   </head>
   
-  <body class="bg-blue-500">    
+  <body class="bg-white">    
 <!------------------------- Navbar ---------------------------->
   <nav class="bg-blue-900 py-6 px-6 w-full top-0 left-0 z-10">
-    <div class="max-w-screen-xl flex flex-wrap items-center justify-center mx-auto"> 
-      <!----------- Hamburger button -------- -->
-      <button
-        type="button"
-        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden focus:outline-none focus:ring-2 text-blue-400 hover:bg-blue-700 focus:ring-blue-600"
-        aria-controls="navbar-default"
-        aria-expanded="false"
-        onClick={handleClick}
-      >
-      ☰
-      </button>
-      <!-------- Navbar menu items -------->
-      <div class="w-full items-center justify-center md:block md:w-auto">
-        <ul class="font-medium flex flex-col bg-blue-900 md:flex-row md:space-x-8 ">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-start mx-auto">    
+
+<!---------------------- Navbar menu items ---------------------->
+      <div id="menu">       
+          <ul class="font-medium text-sm flex bg-blue-900 flex-row md:text-base md:space-x-8 ">
           <li>
             <a
               href='#about'
-              class="block py-2 pl-3 pr-4 text-white rounded hover:text-yellow-300 hover:menu-glow md:border-0 md:p-0"
+              class="block py-2 pl-3 pr-4 text-white hover:text-yellow-300 hover:menu-glow md:border-0 md:p-0"
             >
               About
             </a>
@@ -63,211 +86,278 @@
           <li>
             <a
               href='#projects'
-              class="block py-2 pl-3 pr-4 text-white rounded hover:text-yellow-300 hover:menu-glow md:border-0 md:p-0"
+              class="block py-2 pl-3 pr-4 text-white hover:text-yellow-300 hover:menu-glow md:border-0 md:p-0"
             >
               Projects
             </a>
-          </li>
+          </li>          
           <li>
             <a
-              href='#blogs'
-              class="block py-2 pl-3 pr-4 text-white rounded hover:text-yellow-300 hover:menu-glow md:border-0 md:p-0"
+              href='#certificates'
+              class="block py-2 pl-3 pr-4 text-white hover:text-yellow-300 hover:menu-glow md:border-0 md:p-0"
             >
-              Blogs
+              Certificates
             </a>
           </li>          
         </ul>
-      </div>
+      </div>      
     </div>
   </nav>
-    <main>
-      <div class="h-fit max-w-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl mx-auto">
+    <main>      
 <!------------------------- Header ---------------------------->
-        <header>
-          <div class="text-center text-white py-12">
-            <h1 class="h1-glow">David Akim</h1>
-            <p>Full Stack Developer</p>
-            <div>
-              <a class="fa-icon fa-3x px-2 hover:text-yellow-300 hover:icon-glow" href="https://github.com/david-001/">
-                <i class="fab fa-github"></i>
-              </a>
-              <a class="fa-icon fa-3x px-2 hover:text-yellow-300 hover:icon-glow" href="https://www.linkedin.com/in/david-a-a3749a247/">
-                <i class="fab fa-linkedin"></i>
-              </a>
-              <a class="fa-icon fa-3x px-2 hover:text-yellow-300 hover:icon-glow" href="mailto: davidjohnakim@hotmail.com">
-                <i class="fas fa-envelope"></i>
-              </a>
-            </div>  
-          </div>          
-        </header>    
+      <header>
+        <div class="bg-blue-600 text-center text-white py-12">
+          <h1 class="h1-glow">David Akim</h1>
+          <h2>Web Developer</h2>
+          <div>
+            <a class="fa-icon fa-3x px-2 hover:text-yellow-300 hover:icon-glow" href="https://github.com/david-001/">
+              <i class="fab fa-github"></i>
+            </a>
+            <a class="fa-icon fa-3x px-2 hover:text-yellow-300 hover:icon-glow" href="https://www.linkedin.com/in/david-a-a3749a247/">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a class="fa-icon fa-3x px-2 hover:text-yellow-300 hover:icon-glow" href="mailto: davidjohnakim@hotmail.com">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a class="fa-icon fa-3x px-2 hover:text-yellow-300 hover:icon-glow" href="https://medium.com/@davidjohnakim">
+              <i class="fab fa-medium"></i>
+            </a>
+            <a class="fa-icon fa-3x px-2 hover:text-yellow-300 hover:icon-glow" href="https://dev.to/@david001">
+              <i class="fab fa-dev"></i>
+            </a>
+          </div>  
+        </div>          
+      </header>    
 
+      <div class="h-fit max-w-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl mx-auto">
 <!------------------------- About Me ---------------------------->
-        <div id="about" class="w-full mb-10">                  
-          <div class="bg-lime-100 rounded-md py-4 px-8 md:py-8 md:px-16">
-            <h2 class="pb-6">About Me</h2>
-            <p>
-              A developer with a background in Electrical and Computer Engineering and a passion for creating web applications. 
-              I have a diverse skill set that encompasses developing Angular apps, building an e-commerce platform with Django, 
-              and creating a book review app using React and Spring Boot. I also have experience developing a M.E.R.N. stack (MongoDB, 
-              Express, React, Node) app which keeps tracks of patients' records. 
-            </p>              
-          </div>                       
+        <div id="about" class="w-full mb-10 text-gray-700 text-justify">                            
+          <h2 class="py-6">About Me</h2>
+          <p>
+            A developer with a background in Electrical and Computer Engineering and a passion for creating web applications. 
+            I have a diverse skill set that encompasses developing Angular apps, building an e-commerce platform with Django, 
+            and creating a book review app using React and Spring Boot. I also have experience developing a M.E.R.N. stack (MongoDB, 
+            Express, React, Node) app which keeps tracks of patients' records. 
+          </p>                                              
         </div>        
         
 <!------------------------- Projects ---------------------------->        
-        <div id="projects" class="w-full mb-10">                  
-            <div class="bg-orange-100 rounded-md py-4 px-8 md:py-8 md:px-16">              
-              <h2 class="pb-6">Projects</h2>
-              <div class="w-full flex flex-wrap justify-evenly">
+        <div id="projects" class="w-full mb-10 text-gray-700">                  
+                       
+            <h2 class="pb-6">Projects</h2>
+            <div class="w-full flex flex-wrap justify-center">
 
-                <div class="w-80 relative overflow-auto my-4 md:w-96 shadow-lg bg-blue-500 text-white lg:mx-4 hover:bg-yellow-300 hover:shadow-2xl hover:text-blue-500">
-                  <div class="font-semibold p-4 text-center">Communication Engineering Tool</div>
-                  <div class="w-full flex justify-center items-center">
-                    <img class="w-full" src="./assets/images/projects/comms_eng_tool.jpg" alt="Communication Engineering Tool" />
-                  </div>
-                  <div class="w-full text-center p-4">
-                    <p>Tech: Angular, Plotly.js, AWS S3</p>
-                    <p class="hover:text-red-500"><b>URL: <a href="http://comms-eng-tool.s3-website-us-east-1.amazonaws.com/">Communication Engineering Tool</a></b></p>                    
-                  </div>
+              <div class="project-card">
+                <div class="project-card-title">Lifecare-Sync</div>
+                <div class="project-card-text">This app is designed for medical practitioners to observe and revise patient statuses, medications, and other crucial particulars.</div>
+                <div class="w-full flex justify-center items-center">
+                  <img class="w-full" src="./assets/images/projects/lifecare.jpg" alt="Lifecare-Sync" />
                 </div>
-
-                <div class="w-80 relative overflow-auto my-4 md:w-96 shadow-lg bg-blue-500 text-white lg:mx-4 hover:bg-yellow-300 hover:shadow-2xl hover:text-blue-500">
-                  <div class="font-semibold p-4 text-center">PON Planning Tool</div>
-                  <div class="w-full flex justify-center items-center">
-                    <img class="w-full" src="./assets/images/projects/pon.jpg" alt="PON Planning Tool" />
-                  </div>
-                  <div class="w-full text-center p-4">
-                    <p>Tech Used: Angular, Plotly.js, Mapbox, OSRM, AWS S3</p>
-                    <p class="hover:text-red-500"><b>URL: <a href="http://comms-transmission-tool.s3-website-us-east-1.amazonaws.com/pon">PON Planning Tool</a></b></p>                    
-                  </div>
+                <div class="w-full p-4">                    
+                  <div class="w-full flex flex-wrap justify-center">
+                    <div class="tech-div">MongoDB</div>                    
+                    <div class="tech-div">ExpressJS</div>
+                    <div class="tech-div">React</div>
+                    <div class="tech-div">NodeJS</div>
+                  </div>  
+                  <div class="w-full flex flex-wrap justify-center">
+                    <a class="tech-link link-glow" href="https://lifecare-sync.onrender.com/">LIVE</a>
+                    <a class="tech-link link-glow" href="https://github.com/david-001/lifecare-sync">GITHUB</a>                      
+                  </div>                                                      
                 </div>
+              </div>
 
-                <div class="w-80 relative overflow-auto my-4 md:w-96 shadow-lg bg-blue-500 text-white lg:mx-4 hover:bg-yellow-300 hover:shadow-2xl hover:text-blue-500">
-                  <div class="font-semibold p-4 text-center">LOS Microwave Tool</div>
-                  <div class="w-full flex justify-center items-center">
-                    <img class="w-full" src="./assets/images/projects/los.jpg" alt="LOS Microwave Tool" />
-                  </div>
-                  <div class="w-full text-center p-4">
-                    <p>Tech Used: Angular, Plotly.js, AWS S3</p>
-                    <p class="hover:text-red-500"><b>URL: <a href="http://comms-transmission-tool.s3-website-us-east-1.amazonaws.com/los">LOS Microwave Tool</a></b></p>                    
-                  </div>
+              <div class="project-card">
+                <div class="project-card-title">Communication Engineering Tool</div>
+                <div class="project-card-text">This is an online tool developed to help students understand the fundamentals of communication systems engineering.</div>
+                <div class="w-full flex justify-center items-center">
+                  <img class="w-full" src="./assets/images/projects/comms_eng_tool.jpg" alt="Communication Engineering Tool" />
                 </div>
-
-                <div class="w-80 relative overflow-auto my-4 md:w-96 shadow-lg bg-blue-500 text-white lg:mx-4 hover:bg-yellow-300 hover:shadow-2xl hover:text-blue-500">
-                  <div class="font-semibold p-4 text-center">VSAT Planning Tool</div>
-                  <div class="w-full flex justify-center items-center">
-                    <img class="w-full" src="./assets/images/projects/vsat.jpg" alt="VSAT Planning Tool" />
-                  </div>
-                  <div class="w-full text-center p-4">
-                    <p>Tech Used: Angular, Plotly.js, CesiumJS, AWS S3</p>
-                    <p class="hover:text-red-500"><b>URL: <a href="http://comms-transmission-tool.s3-website-us-east-1.amazonaws.com/vsat">VSAT Planning Tool</a></b></p>                    
-                  </div>
+                <div class="w-full p-4">                    
+                  <div class="w-full flex flex-wrap justify-center">
+                    <div class="tech-div">Angular</div>
+                    <div class="tech-div">Plotly.js</div>
+                    <div class="tech-div">AWS S3</div>                    
+                  </div>  
+                  <div class="w-full flex flex-wrap justify-center">
+                    <a class="tech-link link-glow" href="http://comms-eng-tool.s3-website-us-east-1.amazonaws.com/">LIVE</a>                      
+                  </div>                                                      
                 </div>
+              </div>
 
-                <div class="w-80 relative overflow-auto my-4 md:w-96 shadow-lg bg-blue-500 text-white lg:mx-4 hover:bg-yellow-300 hover:shadow-2xl hover:text-blue-500">
-                  <div class="font-semibold p-4 text-center">Cubesat Planning Tool</div>
-                  <div class="w-full flex justify-center items-center">
-                    <img class="w-full" src="./assets/images/projects/cubesat.jpg" alt="Cubesat Planning Tool" />
-                  </div>
-                  <div class="w-full text-center p-4">
-                    <p>Tech Used: Angular, CesiumJS, AWS S3</p>
-                    <p class="hover:text-red-500"><b>URL: <a href="http://comms-transmission-tool.s3-website-us-east-1.amazonaws.com/cubesat">Cubesat Planning Tool</a></b></p>                    
-                  </div>
+              <div class="project-card">
+                <div class="project-card-title">PON Planning Tool</div>
+                <div class="project-card-text">This is an online tool developed to help students understand the fundamentals of passive optical network planning.</div>
+                <div class="w-full flex justify-center items-center">
+                  <img class="w-full" src="./assets/images/projects/pon.jpg" alt="PON Planning Tool" />
                 </div>
-
-                <div class="w-80 relative overflow-auto my-4 md:w-96 shadow-lg bg-blue-500 text-white lg:mx-4 hover:bg-yellow-300 hover:shadow-2xl hover:text-blue-500">
-                  <div class="font-semibold p-4 text-center">Lifecare-Sync</div>
-                  <div class="w-full flex justify-center items-center">
-                    <img class="w-full" src="./assets/images/projects/lifecare.jpg" alt="Lifecare-Sync" />
-                  </div>
-                  <div class="w-full text-center p-4">
-                    <p>Tech Used: MongoDB, Mongoose, Express, React, NodeJS</p>
-                    <p class="hover:text-red-500"><b>URL: <a href="https://lifecare-sync.onrender.com/">Lifecare-Sync</a></b></p>   
-                    <p class="hover:text-red-500"><b>Github: <a href="https://github.com/david-001/lifecare-sync">Lifecare-Sync</a></b></p>                    
-                  </div>
+                <div class="w-full p-4">                    
+                  <div class="w-full flex flex-wrap justify-center">
+                    <div class="tech-div">Angular</div>
+                    <div class="tech-div">Plotly.js</div>
+                    <div class="tech-div">Mapbox</div>                    
+                    <div class="tech-div">AWS S3</div>
+                  </div>  
+                  <div class="w-full flex flex-wrap justify-center">
+                    <a class="tech-link link-glow" href="http://comms-transmission-tool.s3-website-us-east-1.amazonaws.com/pon">LIVE</a>                                     
+                  </div>                                                      
                 </div>
-
-                <div class="w-80 relative overflow-auto my-4 md:w-96 shadow-lg bg-blue-500 text-white lg:mx-4 hover:bg-yellow-300 hover:shadow-2xl hover:text-blue-500">
-                  <div class="font-semibold p-4 text-center">E-Commerce Website</div>
-                  <div class="w-full flex justify-center items-center">
-                    <img class="w-full" src="./assets/images/projects/ecommerce.jpg" alt="E-Commerce Website" />
-                  </div>
-                  <div class="w-full text-center p-4">
-                    <p>Tech Used: Django, Python</p>
-                    <p class="hover:text-red-500"><b>Video: <a href="https://youtu.be/JxU1AqRI_Wg">E-Commerce Website</a></b></p>   
-                    <p class="hover:text-red-500"><b>Github: <a href="https://github.com/david-001/ecommerce-website-django">E-Commerce Website</a></b></p>                    
-                  </div>
+              </div> 
+              
+              <div class="project-card">
+                <div class="project-card-title">LOS Microwave Tool</div>
+                <div class="project-card-text">This is an online tool developed to help students understand the fundamentals of line of sight microwave network planning.</div>
+                <div class="w-full flex justify-center items-center">
+                  <img class="w-full" src="./assets/images/projects/los.jpg" alt="LOS Microwave Tool" />
                 </div>
-
-                <div class="w-80 relative overflow-auto my-4 md:w-96 shadow-lg bg-blue-500 text-white lg:mx-4 hover:bg-yellow-300 hover:shadow-2xl hover:text-blue-500">
-                  <div class="font-semibold p-4 text-center">Book Review App</div>
-                  <div class="w-full flex justify-center items-center">
-                    <img class="w-full" src="./assets/images/projects/bookreview.jpg" alt="Book Review App" />
-                  </div>
-                  <div class="w-full text-center p-4">
-                    <p>Tech Used: Spring Boot (Java), PostgresSQL, React</p>
-                    <p class="hover:text-red-500"><b>Video: <a href="https://youtu.be/SqMtOeFLTlw">Book Review App</a></b></p>   
-                    <p class="hover:text-red-500"><b>Github: <a href="https://github.com/david-001/book-review-app">Book Review App</a></b></p>                    
-                  </div>
+                <div class="w-full p-4">                    
+                  <div class="w-full flex flex-wrap justify-center">
+                    <div class="tech-div">Angular</div>
+                    <div class="tech-div">Plotly.js</div>                    
+                    <div class="tech-div">AWS S3</div>
+                  </div>  
+                  <div class="w-full flex flex-wrap justify-center">
+                    <a class="tech-link link-glow" href="http://comms-transmission-tool.s3-website-us-east-1.amazonaws.com/los">LIVE</a>                                     
+                  </div>                                                      
                 </div>
+              </div> 
 
-                <div class="w-80 relative overflow-auto my-4 md:w-96 shadow-lg bg-blue-500 text-white lg:mx-4 hover:bg-yellow-300 hover:shadow-2xl hover:text-blue-500">
-                  <div class="font-semibold p-4 text-center">Sta Map (Android App)</div>
-                  <div class="w-full flex justify-center items-center">
-                    <img class="w-full" src="./assets/images/projects/stamap.jpg" alt="Sta Map (Android App)" />
-                  </div>
-                  <div class="w-full text-center p-4">
-                    <p>Tech Used: Java (Android)</p>
-                    <p class="hover:text-red-500"><b>Video: <a href="https://youtu.be/nphESVwz8yo">Sta Map (Android App)</a></b></p>                                   
-                  </div>
+              <div class="project-card">
+                <div class="project-card-title">VSAT Planning Tool</div>
+                <div class="project-card-text">This is an online tool developed to help students understand the fundamentals of very small aperture terminal network planning.</div>
+                <div class="w-full flex justify-center items-center">
+                  <img class="w-full" src="./assets/images/projects/vsat.jpg" alt="VSAT Planning Tool" />
                 </div>
-
+                <div class="w-full p-4">                    
+                  <div class="w-full flex flex-wrap justify-center">
+                    <div class="tech-div">Angular</div>
+                    <div class="tech-div">Plotly.js</div>   
+                    <div class="tech-div">CesiumJS</div>                 
+                    <div class="tech-div">AWS S3</div>
+                  </div>  
+                  <div class="w-full flex flex-wrap justify-center">
+                    <a class="tech-link link-glow" href="http://comms-transmission-tool.s3-website-us-east-1.amazonaws.com/vsat">LIVE</a>                                     
+                  </div>                                                      
+                </div>
               </div>  
-            </div>                       
+              
+              <div class="project-card">
+                <div class="project-card-title">Cubesat Planning Tool</div>
+                <div class="project-card-text">This is an online tool developed to help students understand the fundamentals of cubesat network planning.</div>
+                <div class="w-full flex justify-center items-center">
+                  <img class="w-full" src="./assets/images/projects/cubesat.jpg" alt="Cubesat Planning Tool" />
+                </div>
+                <div class="w-full p-4">                    
+                  <div class="w-full flex flex-wrap justify-center">
+                    <div class="tech-div">Angular</div>                    
+                    <div class="tech-div">CesiumJS</div>                 
+                    <div class="tech-div">AWS S3</div>
+                  </div>  
+                  <div class="w-full flex flex-wrap justify-center">
+                    <a class="tech-link link-glow" href="http://comms-transmission-tool.s3-website-us-east-1.amazonaws.com/cubesat">LIVE</a>                                     
+                  </div>                                                      
+                </div>
+              </div>  
+
+              <div class="project-card">
+                <div class="project-card-title">E-Commerce Website</div>
+                <div class="project-card-text">This website allows retailers sell their products and customers to place orders. An administrator monitors all products and orders.</div>
+                <div class="w-full flex justify-center items-center">
+                  <img class="w-full" src="./assets/images/projects/ecommerce.jpg" alt="E-Commerce Website" />
+                </div>
+                <div class="w-full p-4">                    
+                  <div class="w-full flex flex-wrap justify-center">
+                    <div class="tech-div">Django</div>                    
+                    <div class="tech-div">Python</div>                                     
+                  </div>  
+                  <div class="w-full flex flex-wrap justify-center">
+                    <a class="tech-link link-glow" href="https://github.com/david-001/ecommerce-website-django">GITHUB</a>  
+                    <a class="tech-link link-glow" href="https://youtu.be/JxU1AqRI_Wg">VIDEO</a>                                     
+                  </div>                                                      
+                </div>
+              </div>
+
+              <div class="project-card">
+                <div class="project-card-title">Book Review App</div>
+                <div class="project-card-text">This app allows users to search for books using the Open Library API, review the books and save the reviews.</div>
+                <div class="w-full flex justify-center items-center">
+                  <img class="w-full" src="./assets/images/projects/bookreview.jpg" alt="Book Review App" />
+                </div>
+                <div class="w-full p-4">                    
+                  <div class="w-full flex flex-wrap justify-center">
+                    <div class="tech-div">Spring Boot (Java)</div>                    
+                    <div class="tech-div">PostgreSQL</div>                 
+                    <div class="tech-div">React</div>
+                  </div>  
+                  <div class="w-full flex flex-wrap justify-center">
+                    <a class="tech-link link-glow" href="https://github.com/david-001/book-review-app">GITHUB</a>  
+                    <a class="tech-link link-glow" href="https://youtu.be/SqMtOeFLTlw">VIDEO</a>                                     
+                  </div>                                                      
+                </div>
+              </div> 
+              
+              <div class="project-card">
+                <div class="project-card-title">Sta Map (Android App)</div>
+                <div class="project-card-text">This app helps students or visitors find rooms or buildings at the University of the West Indies, St.Augustine campus.</div>
+                <div class="w-full flex justify-center items-center">
+                  <img class="w-full" src="./assets/images/projects/stamap.jpg" alt="Sta Map (Android App)" />
+                </div>
+                <div class="w-full p-4">                    
+                  <div class="w-full flex flex-wrap justify-center">
+                    <div class="tech-div">Android (Java)</div>                                        
+                  </div>  
+                  <div class="w-full flex flex-wrap justify-center">                    
+                    <a class="tech-link link-glow" href="https://youtu.be/nphESVwz8yo">VIDEO</a>                                     
+                  </div>                                                      
+                </div>
+              </div> 
+              
+
+            </div>  
+                                  
+        </div>      
+        
+<!------------------------- Certificates ---------------------------->       
+        <div id="certificates" class="w-full h-fit mb-10">
+          <h2 class="pb-6">Certificates</h2>
+          <div class="flex flex-wrap justify-center">
+            <a href="./assets/images/Slackbot.jpg"><img class="cert-img" src="./assets/images/Slackbot.jpg" alt="Slackbot" /></a>
+            <a href="./assets/images/Reply.jpg"><img class="cert-img" src="./assets/images/Reply.jpg" alt="Reply" /></a>
+            <a href="./assets/images/Book%20Review.jpg"><img class="cert-img" src="./assets/images/Book Review.jpg" alt="Book Review" /></a>
+            <a href="./assets/images/AWS%20Attendance.png"><img class="cert-img" src="./assets/images/AWS Attendance.png" alt="AWS Attendance" /></a>
+            <a href="./assets/images/Whylabs%20AI.jpg"><img class="cert-img" src="./assets/images/Whylabs AI.jpg" alt="Whylabs AI" /></a>
+            <a href="./assets/images/Django%20E-commerce.jpg"><img class="cert-img" src="./assets/images/Django E-commerce.jpg" alt="Django E-commerce" /></a>
+            <a href="./assets/images/Data%20Analyst.jpg"><img class="cert-img" src="./assets/images/Data Analyst.jpg" alt="Data Analyst" /></a>
+            <a href="./assets/images/Whylabs%20Computer%20Vision.jpg"><img class="cert-img" src="./assets/images/Whylabs Computer Vision.jpg" alt="Whylabs Computer Vision" /></a>
+            <a href="./assets/images/DeepLearning%20AI.jpg"><img class="cert-img" src="./assets/images/DeepLearning AI.jpg" alt="DeepLearning AI" /></a>            
+            <a href="./assets/images/Machine%20Learning.jpg"><img class="cert-img" src="./assets/images/Machine Learning.jpg" alt="Machine Learning" /></a>
+          </div>  
         </div>
-          
-<!------------------------- Blogs ---------------------------->
-        <div id="blogs" class="w-full mb-10">                  
-          <div class="bg-indigo-100 rounded-md py-4 px-8 md:py-8 md:px-16">              
-            <h2 class="pb-6">Blogs</h2>
-            <div class="w-full flex flex-wrap justify-evenly">
-
-              <a href="https://medium.com/@davidjohnakim/using-plotly-js-with-angular-7fc07ca9a48f" class="w-80 relative overflow-auto my-4 md:w-96 shadow-lg bg-blue-500 text-white lg:mx-4 hover:bg-red-300 hover:shadow-2xl hover:text-blue-500">
-                <div class="font-semibold p-4 text-center">Using Plotly.js with Angular</div>
-                <div class="w-full flex justify-center items-center">
-                  <img class="w-full" src="./assets/images/blogs/blog1.jpg" alt="Using Plotly.js with Angular" />
-                </div>                  
-              </a>
-
-              <a href="https://medium.com/@davidjohnakim/using-cesiumjs-with-angular-f246c1d1b26a" class="w-80 relative overflow-auto my-4 md:w-96 shadow-lg bg-blue-500 text-white lg:mx-4 hover:bg-red-300 hover:shadow-2xl hover:text-blue-500">
-                <div class="font-semibold p-4 text-center">Using CesiumJS with Angular</div>
-                <div class="w-full flex justify-center items-center">
-                  <img class="w-full" src="./assets/images/blogs/blog2.jpg" alt="Using CesiumJS with Angular" />
-                </div>                  
-              </a>
-
-            </div>
-          </div>                    
-        </div>   
         
       </div>
     </div>
   </main>
 <!------------------------- Footer ---------------------------->
     <footer>
-      <div class="text-center text-white">
+      <div class="bg-blue-600 py-4 text-center text-white">
         <div>
-          <a class="fa-icon fa-2x px-2 hover:text-yellow-300" href="https://github.com/david-001/" title="">
+          <a class="fa-icon fa-2x px-2 hover:text-yellow-300" href="https://github.com/david-001/">
             <i class="fab fa-github hover:icon-glow"></i>
           </a>
-          <a class="fa-icon fa-2x px-2 hover:text-yellow-300" href="https://www.linkedin.com/in/david-a-a3749a247/" title="">
+          <a class="fa-icon fa-2x px-2 hover:text-yellow-300" href="https://www.linkedin.com/in/david-a-a3749a247/">
             <i class="fab fa-linkedin hover:icon-glow"></i>
           </a>
-          <a class="fa-icon fa-2x px-2 hover:text-yellow-300" href="mailto: davidjohnakim@hotmail.com" title="">
+          <a class="fa-icon fa-2x px-2 hover:text-yellow-300" href="mailto: davidjohnakim@hotmail.com">
             <i class="fas fa-envelope hover:icon-glow"></i>
           </a>
+          <a class="fa-icon fa-2x px-2 hover:text-yellow-300 hover:icon-glow" href="https://medium.com/@davidjohnakim">
+            <i class="fab fa-medium"></i>
+          </a>
+          <a class="fa-icon fa-2x px-2 hover:text-yellow-300 hover:icon-glow" href="https://dev.to/@david001">
+            <i class="fab fa-dev"></i>
+          </a>
         </div>          
-        <i class="far fa-copyright py-4" aria-hidden="true"></i> Created by David Akim
+        <div class="text-xs"><i class="far fa-copyright py-4" aria-hidden="true"></i> Created by David Akim</div>
       </div>      
     </footer>
       
