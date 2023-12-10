@@ -24,7 +24,7 @@
         h2{
           font-size: 30px;
           font-family: 'Monsterrat', sans-serif;
-        }
+        }            
         .menu-glow{
           text-shadow: 0px 0px 5px rgb(255,255,255);
         }    
@@ -56,6 +56,9 @@
           .cert-img{
             @apply w-80 my-6 mx-4 shadow-lg hover:w-96
           }   
+          .h3{
+            @apply text-lg hover:text-blue-500
+          }
           /* .project-card:hover .tech-div {
             @apply border-blue-500
           }  
@@ -89,6 +92,14 @@
               class="block py-2 pl-3 pr-4 text-white hover:text-yellow-300 hover:menu-glow md:border-0 md:p-0"
             >
               Projects
+            </a>
+          </li>   
+          <li>
+            <a
+              href='#news'
+              class="block py-2 pl-3 pr-4 text-white hover:text-yellow-300 hover:menu-glow md:border-0 md:p-0"
+            >
+              News
             </a>
           </li>          
           <li>
@@ -176,11 +187,10 @@
                 <div class="w-full p-4">                    
                   <div class="w-full flex flex-wrap justify-center">
                     <div class="tech-div">Angular</div>
-                    <div class="tech-div">Plotly.js</div>
-                    <div class="tech-div">AWS S3</div>                    
+                    <div class="tech-div">Plotly.js</div>                                     
                   </div>  
                   <div class="w-full flex flex-wrap justify-center">
-                    <a class="tech-link link-glow" href="http://comms-eng-tool.s3-website-us-east-1.amazonaws.com/">LIVE</a>                      
+                    <a class="tech-link link-glow" href="https://basic-comms-eng.netlify.app/">LIVE</a>                      
                   </div>                                                      
                 </div>
               </div>
@@ -195,11 +205,10 @@
                   <div class="w-full flex flex-wrap justify-center">
                     <div class="tech-div">Angular</div>
                     <div class="tech-div">Plotly.js</div>
-                    <div class="tech-div">Mapbox</div>                    
-                    <div class="tech-div">AWS S3</div>
+                    <div class="tech-div">Mapbox</div>                                        
                   </div>  
                   <div class="w-full flex flex-wrap justify-center">
-                    <a class="tech-link link-glow" href="http://comms-transmission-tool.s3-website-us-east-1.amazonaws.com/pon">LIVE</a>                                     
+                    <a class="tech-link link-glow" href="https://comms-eng-trans.netlify.app/pon">LIVE</a>                                     
                   </div>                                                      
                 </div>
               </div> 
@@ -213,11 +222,10 @@
                 <div class="w-full p-4">                    
                   <div class="w-full flex flex-wrap justify-center">
                     <div class="tech-div">Angular</div>
-                    <div class="tech-div">Plotly.js</div>                    
-                    <div class="tech-div">AWS S3</div>
+                    <div class="tech-div">Plotly.js</div>                                        
                   </div>  
                   <div class="w-full flex flex-wrap justify-center">
-                    <a class="tech-link link-glow" href="http://comms-transmission-tool.s3-website-us-east-1.amazonaws.com/los">LIVE</a>                                     
+                    <a class="tech-link link-glow" href="https://comms-eng-trans.netlify.app/los">LIVE</a>                                     
                   </div>                                                      
                 </div>
               </div> 
@@ -232,11 +240,10 @@
                   <div class="w-full flex flex-wrap justify-center">
                     <div class="tech-div">Angular</div>
                     <div class="tech-div">Plotly.js</div>   
-                    <div class="tech-div">CesiumJS</div>                 
-                    <div class="tech-div">AWS S3</div>
+                    <div class="tech-div">CesiumJS</div>                                     
                   </div>  
                   <div class="w-full flex flex-wrap justify-center">
-                    <a class="tech-link link-glow" href="http://comms-transmission-tool.s3-website-us-east-1.amazonaws.com/vsat">LIVE</a>                                     
+                    <a class="tech-link link-glow" href="https://comms-eng-trans.netlify.app/vsat">LIVE</a>                                     
                   </div>                                                      
                 </div>
               </div>  
@@ -250,11 +257,10 @@
                 <div class="w-full p-4">                    
                   <div class="w-full flex flex-wrap justify-center">
                     <div class="tech-div">Angular</div>                    
-                    <div class="tech-div">CesiumJS</div>                 
-                    <div class="tech-div">AWS S3</div>
+                    <div class="tech-div">CesiumJS</div>                                     
                   </div>  
                   <div class="w-full flex flex-wrap justify-center">
-                    <a class="tech-link link-glow" href="http://comms-transmission-tool.s3-website-us-east-1.amazonaws.com/cubesat">LIVE</a>                                     
+                    <a class="tech-link link-glow" href="https://comms-eng-trans.netlify.app/cubesat">LIVE</a>                                     
                   </div>                                                      
                 </div>
               </div>  
@@ -315,7 +321,60 @@
 
             </div>  
                                   
-        </div>      
+        </div>
+        
+<!------------------------- Certificates ---------------------------->   
+        <div id="news" class="w-full mb-10 text-gray-700 text-justify">                            
+          <h2 class="pb-6">News</h2>
+          <div class="h3"><a href="https://dev.to/david001/create-an-agebot-in-slack-41j5"><b>Blog Post: Create an Agebot in Slack using Python </b><i>(30 November 2023)</i></a></div> 
+          <br />
+          <p>
+            In this blog, I go through the steps of creating a bot in the Slack messaging app which automatically determines the user's age based on the user's input. 
+          </p>
+          <br/><hr/><br/>   
+          <div class="h3"><a href="https://dev.to/david001/creating-a-movie-finder-app-with-streamlit-and-omdb-api-2fak"><b>Blog Post: Creating a movie finder app with Streamlit and OMDb API </b><i>(27 November 2023)</i></a></div>   
+          <br />
+          <p>
+            In this blog, I go through the steps of creating a movie finder app using Streamlit and the OMDb API. Streamlit is an open-source Python library that makes it easy to create custom web apps. The OMDb API is a RESTful web service for retrieving movie information. The movie finder app will have a feature to filter the movie results by type either movie or series, by year of release and by IMDB rating. It will also have a feature to plot the ratings and votes.
+          </p>
+          <br/><hr/><br/>   
+          <div class="h3"><a href="https://dev.to/david001/using-plotlyjs-with-react-el8"><b>Blog Post: Using Plotly.js with React </b><i>(17 November 2023)</i></a></div>   
+          <br />
+          <p>
+            In this blog, I go through the steps of using Plotly.js in React. Plotly.js is an Open Source Graphing Library. At the end of this lesson, you should be able to do a simple plot with Plotly.js.
+          </p>
+          <br/><hr/><br/>       
+          <div class="h3"><b>Completed Hacktoberfest 2023 </b><i>(12 October 2023)</i></div>
+          <br />
+          <div class="flex items-center justify-center">
+            <img class="w-full md:w-10/12 lg:w-8/12" src="./assets/images/hacktoberfest2023.jpg" alt="Completed Hacktoberfest 2023" />
+          </div>          
+          <br/><hr/><br/>
+          <div class="h3"><a href="https://tree-nation.com/trees/view/5247723"><b>Received Hacktoberfest Tree 2023 </b><i>(11 October 2023)</i></a></div>
+          <br />
+          <div class="flex items-center justify-center">
+            <img class="w-full md:w-10/12 lg:w-8/12" src="./assets/images/hacktoberfest_tree_2023.jpg" alt="Received Hacktoberfest Tree 2023" />
+          </div>
+          <br/><hr/><br/>
+          <div class="h3"><a href="https://www.bella-programme.eu/index.php/en/component/content/article/101-ultimas-noticias-2023/279-check-out-the-results-of-the-bella-hackathon-copernicus-innovation-development?Itemid=437"><b>BELLA Hackathon: Copernicus Innovation Development 2nd Place </b><i>(9 August 2023)</i></a></div>
+          <br />
+          <p>
+            I am happy share that I participated in the “BELLA Hackathon: Copernicus Innovation Development”. I joined Group #25 and we took part in the SADAI (Satellite Data Interpreter + Artificial Intelligence) category. We built an app called Sistema de Prevención de Incendios (Fire Prevention System). This app uses Copernicus satellite data to generate maps of active fires across Argentina. We won 2nd place! The hackathon was in Spanish which I did not speak, but thanks to my team members, I overcame that hurdle!
+          </p>
+          <br/><hr/><br/>
+          <div class="h3"><a href="https://dev.to/david001/using-cesiumjs-with-angular-4kh1"><b>Blog Post: Using CesiumJS with Angular </b><i>(8 June 2023)</i></a></div>
+          <br />
+          <p>
+            In this blog, I go through the steps of integrating CesiumJS with Angular. CesiumJS is an open source JavaScript library for creating 3D globes and maps. At the end of the lesson you should be able to do a simple plot with CesiumJS.
+          </p>   
+          <br/><hr/><br/>                      
+          <div class="h3"><a href="https://dev.to/david001/using-plotlyjs-with-angular-31jd"><b>Blog Post: Using Plotly.js with Angular </b><i>(8 June 2023)</i></a></div>
+          <br />
+          <p>
+            In this blog, I go through the steps of integrating Plotly.js with Angular. Plotly.js is an Open Source Graphing Library. At the end of the lesson you should be able to do a simple plot with Plotly.js.
+          </p> 
+          <br/><hr/>                                                
+        </div>  
         
 <!------------------------- Certificates ---------------------------->       
         <div id="certificates" class="w-full h-fit mb-10">
